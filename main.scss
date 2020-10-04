@@ -12,6 +12,12 @@ body
 	color: white;
 }
 
+img
+{
+	width: 100%;
+	height: 100%;
+}
+
 #imagecontainer
 {
 	z-index: 2;
@@ -22,8 +28,6 @@ body
 
 	img
 	{
-		width: 100%;
-		height: 100%;
 		opacity: .28;
 	}
 }
@@ -38,6 +42,16 @@ h1
 	margin-left: 1.5rem;
 }
 
+
+#arrowcontainer
+{
+	position: absolute;
+	bottom: 1em;
+	width: 2vw;
+	opacity: .6;
+	//image is 300px wide
+	margin-left: ((100vw / 2) - (3vw / 2));
+}
 
 
 
@@ -67,11 +81,6 @@ h1
 
 			margin: 1em 0;
 
-			img
-			{
-				width: 100%;
-				height: 100%;
-			}
 		}
 	}
 
@@ -167,12 +176,12 @@ h1
 	{
 		font-size: 5rem;
 		margin-top: 17rem;
-		margin-left: 10rem;
+		margin-left: 20rem;
 	}
 
 	#imagecontainer
 	{
 		width: 30%;
-		margin-right: 21rem;
+		margin-right: 16rem;
 	}
 }
