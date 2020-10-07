@@ -3,48 +3,32 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel='stylesheet' href='main.min.css'>
 	<title>Welcome.</title>
 </head>
 <body>
 
-	<div id="imagecontainer">
-		<img src='art/test.svg' alt='graphic'/>
-	</div>
-
-	<h1>Welcome to my portfolio.</h1>
-
-	<div id='arrowcontainer'>
-		<img src='art/arrow.png' alt='arrow'/>
-	</div>
-
-	<div id='container'>
-		<div class='blockcontainer'>
-			<div class='imgcontainer'>
-				<a href='art/scale.jpg' target='_blank'><img src='art/scale.jpg' alt='face'/></a>
-			</div>
-		</div>
-		<div class='blockcontainer'>
-			<div class='imgcontainer'>
-				<a href='art/eyes.jpg' target='_blank'><img src='art/eyes.jpg' alt='eyes'/></a>
-			</div>
-		</div>
-		<div class='blockcontainer'>
-			<div class='imgcontainer'>
-				<a href='art/face.jpg' target='_blank'><img src='art/face.jpg' alt='face'/></a>
-			</div>
-		</div>
-		<div class='blockcontainer'>
-			<div class='imgcontainer'>
-				<a href='art/sphere.jpg' target='_blank'><img src='art/sphere.jpg' alt='sphere'/></a>
-			</div>
-		</div>
-		<div class='blockcontainer'>
-			<div class='imgcontainer'>
-				<a href='art/wedge.png' target='_blank'><img src='art/wedge.png' alt='wedge'/></a>
+	<div class='container-fluid'>
+		<div class='row mt-5 pt-5'>
+			<div class='col'>
+				<div class='polaroid d-flex flex-column pl-3 pt-3 pr-3 mx-auto bg-white'>
+					<div class='polaroid-inner w-100 d-flex flex-column justify-content-center align-items-center overflow-hidden' style='height: 83%; background-color: black;'>
+						<a href='/art/scale.jpg' target='_blank' class='w-100 h-100 position-relative'>
+							<div class='vintage'></div>
+							<img src='/art/scale.jpg' alt='scale' class='w-100 h-100'/>
+						</a>
+					</div>
+					<div class='text-container d-flex w-100 flex-fill justify-content-center align-items-center'>
+						<h1>"Sphere"</h1>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
