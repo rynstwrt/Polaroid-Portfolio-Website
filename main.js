@@ -5,17 +5,13 @@ $(document).ready(() =>
 	$('#rightarrow').click((e) =>
 	{
 		let currActive = $('.active');
-		const nextActive = currActive.parent().next().children()[0];
-
-		if (nextActive)
+		const nextActive = currActive.next();
+		if (nextActive.length != 0)
 		{
 			$(currActive).removeClass('active');
 			$(nextActive).addClass('active');
-
-			currActive = $('.active').parent();
-			prevActive = currActive.prev();
-
-			const diff = Math.abs($(prevActive).offset().left - $(currActive).offset().left);
+			prevActive = currActive.next();
+			const diff = Math.abs(prevActive.offset().left - currActive.offset().left);
 			$.each($('#scroller').children(), (i, v) =>
 			{
 				const currentPosition = $(v).offset();
@@ -27,17 +23,14 @@ $(document).ready(() =>
 	$('#leftarrow').click((e) =>
 	{
 		let currActive = $('.active');
-		const nextActive = currActive.parent().prev().children()[0];
-
-		if (nextActive)
+		const nextActive = currActive.prev();
+		console.log(nextActive.length);
+		if (nextActive.length != 0)
 		{
 			$(currActive).removeClass('active');
 			$(nextActive).addClass('active');
-
-			currActive = $('.active').parent();
-			prevActive = currActive.next();
-
-			const diff = Math.abs($(prevActive).offset().left - $(currActive).offset().left);
+			prevActive = currActive.prev();
+			const diff = Math.abs(prevActive.offset().left - currActive.offset().left);
 			$.each($('#scroller').children(), (i, v) =>
 			{
 				const currentPosition = $(v).offset();
