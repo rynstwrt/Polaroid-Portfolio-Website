@@ -189,6 +189,14 @@ body
 	$polaroidinnerheight: $polaroidheight * .83;
 	$polaroidinnerheightactive: $polaroidheightactive * .83;
 
+	.arrowcontainer
+	{
+		img
+		{
+			width: 65px !important;
+		}
+	}
+
 	.polaroid
 	{
 		width: $polaroidwidth !important;
@@ -215,6 +223,7 @@ body
 
 @media (min-width: 992px) // (lg) landscape tablets
 {
+
 }
 
 @media (min-width: 1200px) // (xl) desktops
@@ -224,6 +233,14 @@ body
 	$polaroidheightactive: ($polaroidwidth * 1.23333);
 	$polaroidinnerheight: $polaroidheight * .83;
 	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	.arrowcontainer
+	{
+		img
+		{
+			width: 80px !important;
+		}
+	}
 
 	.polaroid
 	{
