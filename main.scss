@@ -9,6 +9,8 @@ $color1: hsl(23, 90%, 74%);
 body
 {
 	background-color: $color1;
+	height: 100vh;
+	min-height: 100vh;
 }
 
 .active
