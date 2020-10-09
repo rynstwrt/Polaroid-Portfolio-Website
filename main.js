@@ -1,5 +1,18 @@
+//Ryan Stewart 10/08/2020
 $(document).ready(() =>
 {
+
+	function updateSize()
+	{
+		let vh = window.innerHeight * .01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
+	updateSize();
+
+	window.addEventListener('resize', () =>
+	{
+		updateSize();
+	});
 
 
 	$('#rightarrow').click((e) =>
@@ -24,7 +37,6 @@ $(document).ready(() =>
 	{
 		let currActive = $('.active');
 		const nextActive = currActive.prev();
-		console.log(nextActive.length);
 		if (nextActive.length != 0)
 		{
 			$(currActive).removeClass('active');

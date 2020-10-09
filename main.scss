@@ -1,4 +1,3 @@
-//Ryan Stewart 10/09/2020
 $polaroidwidth: 150px;
 $polaroidheight: ($polaroidwidth * 1.23333) - 50px;
 $polaroidheightfinished: ($polaroidwidth * 1.23333);
@@ -13,7 +12,7 @@ body
 {
 	background-color: $color1;
 	height: 100vh;
-	min-height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 }
 
 .active
