@@ -1,5 +1,6 @@
-$polaroidwidth: 300px;
+$polaroidwidth: 150px;
 $polaroidheight: ($polaroidwidth * 1.23333);
+$polaroidinnerheight: $polaroidheight * .8;
 $zoomamount: 130%;
 $color1: hsl(23, 90%, 74%);
 
@@ -19,6 +20,8 @@ body
 {
 	height: 100vh;
 	width: 100vw;
+
+	position: relative;
 
 	.arrowcontainer
 	{
@@ -50,7 +53,7 @@ body
 	#scroller
 	{
 
-		transition: margin-left .3s ease-out;
+		transition: margin-left .3s linear;
 
 		a
 		{
@@ -71,27 +74,32 @@ body
 
 				.polaroid-inner
 				{
-						.hovercontainer
+
+					height: $polaroidinnerheight !important;
+
+					.hovercontainer
+					{
+
+						background-color: rgba(0, 0, 0, .2);
+
+						h1
 						{
-
-							background-color: rgba(0, 0, 0, .2);
-
-							h1
-							{
-								opacity: 0;
-								font-size: 1.2em;
-								transition: opacity .4s ease-in-out;
-							}
+							opacity: 0;
+							font-size: .8em;
+							transition: opacity .4s ease-in-out;
 						}
+					}
 				}
 
 
 				.text-container
 				{
+
+					height: 20%;
 					h1
 					{
 						font-family: 'Caveat', cursive;
-						font-size: 2.3em;
+						font-size: 1em;
 					}
 				}
 
