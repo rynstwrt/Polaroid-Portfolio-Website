@@ -1,1 +1,1 @@
-https://rynstwrt.github.io/Portfolio-Website/
+https://rynstwrt.github.io/Polaroid-Portfolio-Website/
