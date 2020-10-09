@@ -2,11 +2,16 @@
 $polaroidwidth: 150px;
 $polaroidheight: ($polaroidwidth * 1.23333) - 25px;
 $polaroidheightactive: ($polaroidwidth * 1.23333);
-$polaroidinnerheight: $polaroidheight * .8;
-$polaroidinnerheightactive: $polaroidheightactive * .8;
+$polaroidinnerheight: $polaroidheightactive;
+$polaroidinnerheightactive: $polaroidheightactive * .83;
 $color1: hsl(23, 90%, 74%);
 $polaroidhovertime: .2s;
 $polaroidtimefunction: ease-out;
+
+*
+{
+	box-sizing: content-box;
+}
 
 body
 {
@@ -15,6 +20,8 @@ body
 
 .active
 {
+	pointer-events: auto !important;
+
 	.overlay
 	{
 		opacity: 0;
@@ -27,7 +34,7 @@ body
 
 		.polaroid-inner
 		{
-			height: $polaroidinnerheightactive;
+			height: $polaroidinnerheightactive !important;
 
 			.hovercontainer
 			{
@@ -78,7 +85,6 @@ body
 		}
 	}
 
-
 	#leftarrow
 	{
 		transform: rotate(-90deg);
@@ -93,6 +99,7 @@ body
 	{
 		a
 		{
+			pointer-events: none;
 			color: inherit;
 			left: 0;
 			transition: left .3s $polaroidtimefunction;
@@ -131,22 +138,112 @@ body
 						}
 					}
 				}
-
-				.text-container
-				{
-					height: 20%;
-					h1
-					{
-						font-family: 'Caveat', cursive;
-						font-size: 1em;
-					}
-				}
 			}
 
 			&:hover
 			{
 				text-decoration: none;
 				color: inherit;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) // 576px to 768px (sm) landscape phones
+{
+	$polaroidwidth: 200px;
+	$polaroidheight: ($polaroidwidth * 1.23333) - 25px;
+	$polaroidheightactive: ($polaroidwidth * 1.23333);
+	$polaroidinnerheight: $polaroidheight * .83;
+	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	.polaroid
+	{
+		width: $polaroidwidth !important;
+		height: $polaroidheight !important;
+
+		.polaroid-inner
+		{
+			height: $polaroidinnerheight !important;
+		}
+	}
+
+	.active
+	{
+		.polaroid
+		{
+			height: $polaroidheightactive !important;
+			.polaroid-inner
+			{
+				height: $polaroidinnerheightactive !important;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) // (md) tablets
+{
+	$polaroidwidth: 300px;
+	$polaroidheight: ($polaroidwidth * 1.23333) - 25px;
+	$polaroidheightactive: ($polaroidwidth * 1.23333);
+	$polaroidinnerheight: $polaroidheight * .83;
+	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	.polaroid
+	{
+		width: $polaroidwidth !important;
+		height: $polaroidheight !important;
+
+		.polaroid-inner
+		{
+			height: $polaroidinnerheight !important;
+		}
+	}
+
+	.active
+	{
+		.polaroid
+		{
+			height: $polaroidheightactive !important;
+			.polaroid-inner
+			{
+				height: $polaroidinnerheightactive !important;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) // (lg) landscape tablets
+{
+}
+
+@media (min-width: 1200px) // (xl) desktops
+{
+	$polaroidwidth: 250px;
+	$polaroidheight: ($polaroidwidth * 1.23333) - 25px;
+	$polaroidheightactive: ($polaroidwidth * 1.23333);
+	$polaroidinnerheight: $polaroidheight * .83;
+	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	.polaroid
+	{
+		width: $polaroidwidth !important;
+		height: $polaroidheight !important;
+
+		.polaroid-inner
+		{
+			height: $polaroidinnerheight !important;
+		}
+	}
+
+	.active
+	{
+		.polaroid
+		{
+			height: $polaroidheightactive !important;
+			.polaroid-inner
+			{
+				height: $polaroidinnerheightactive !important;
 			}
 		}
 	}
