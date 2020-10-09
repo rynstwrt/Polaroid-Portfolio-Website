@@ -2,21 +2,17 @@
 $(document).ready(() =>
 {
 
-	function updateSize()
+	let canClick = true;
+	function debounce()
 	{
-		let vh = window.innerHeight * .01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+		canClick = true;
 	}
-	updateSize();
-
-	window.addEventListener('resize', () =>
-	{
-		updateSize();
-	});
-
 
 	$('#rightarrow').click((e) =>
 	{
+		if (!canClick) return;
+		canClick = false;
+		setTimeout(debounce, 200);
 		let currActive = $('.active');
 		const nextActive = currActive.next();
 		if (nextActive.length != 0)
@@ -35,6 +31,9 @@ $(document).ready(() =>
 
 	$('#leftarrow').click((e) =>
 	{
+		if (!canClick) return;
+		canClick = false;
+		setTimeout(debounce, 200);
 		let currActive = $('.active');
 		const nextActive = currActive.prev();
 		if (nextActive.length != 0)
