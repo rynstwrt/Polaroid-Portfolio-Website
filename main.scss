@@ -6,13 +6,9 @@ $polaroidinnerheightfinished: $polaroidheightfinished * .8;
 $zoomamount: 130%;
 $color1: hsl(23, 90%, 74%);
 
-
-
 body
 {
-	background-color: blue;
-	height: 100vh;
-	min-height: -webkit-fill-available;
+	background-color: $color1;
 }
 
 .active
