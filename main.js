@@ -1,11 +1,6 @@
 $(document).ready(() =>
 {
 
-	const startPosition = $("#scroller").offset().left;
-	const first = $($('.active').parent().children()[1]);
-	const second = $($(first).parent().next().children()[1]);
-	const offset = Math.abs(first.offset().left - second.offset().left);
-
 
 	$('#rightarrow').click((e) =>
 	{
@@ -14,13 +9,18 @@ $(document).ready(() =>
 
 		if (nextActive)
 		{
-			currActive.removeClass('active');
+			$(currActive).removeClass('active');
 			$(nextActive).addClass('active');
-			currActive = nextActive;
-			delete nextActive;
-			const scrollerPos = $('#scroller').offset().left;
-			const newMargin = scrollerPos - (offset * 2);
-			$("#scroller").css({marginLeft: newMargin});
+
+			currActive = $('.active').parent();
+			prevActive = currActive.prev();
+
+			const diff = Math.abs($(prevActive).offset().left - $(currActive).offset().left);
+			$.each($('#scroller').children(), (i, v) =>
+			{
+				const currentPosition = $(v).offset();
+				$(v).offset({top: currentPosition.top, left: (currentPosition.left - diff)});
+			});
 		}
 	});
 
@@ -31,18 +31,18 @@ $(document).ready(() =>
 
 		if (nextActive)
 		{
-			currActive.removeClass('active');
+			$(currActive).removeClass('active');
 			$(nextActive).addClass('active');
-			currActive = nextActive;
-			delete nextActive;
-			const scrollerPos = $('#scroller').offset().left;
-			const newMargin = scrollerPos + (offset * 2);
-			$("#scroller").css({marginLeft: newMargin});
+
+			currActive = $('.active').parent();
+			prevActive = currActive.next();
+
+			const diff = Math.abs($(prevActive).offset().left - $(currActive).offset().left);
+			$.each($('#scroller').children(), (i, v) =>
+			{
+				const currentPosition = $(v).offset();
+				$(v).offset({top: currentPosition.top, left: (currentPosition.left + diff)});
+			});
 		}
 	});
-
-
-
-
-
 });
