@@ -1,9 +1,8 @@
 $polaroidwidth: 150px;
 $polaroidheight: ($polaroidwidth * 1.23333) - 50px;
-$polaroidheightfinished: ($polaroidwidth * 1.23333);
+$polaroidheightactive: ($polaroidwidth * 1.23333);
 $polaroidinnerheight: $polaroidheight * .8;
-$polaroidinnerheightfinished: $polaroidheightfinished * .8;
-$zoomamount: 130%;
+$polaroidinnerheightactive: $polaroidheightactive * .8;
 $color1: hsl(23, 90%, 74%);
 
 body
@@ -20,11 +19,29 @@ body
 
 	.polaroid
 	{
-		height: $polaroidheightfinished !important;
+		height: $polaroidheightactive !important;
 
 		.polaroid-inner
 		{
-			height: $polaroidinnerheightfinished;
+			height: $polaroidinnerheightactive;
+		}
+	}
+
+	&:hover
+	{
+		.polaroid
+		{
+			box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, .42) !important;
+			.polaroid-inner
+			{
+				.hovercontainer
+				{
+					h1
+					{
+						opacity: 1 !important;
+					}
+				}
+			}
 		}
 	}
 }
@@ -65,14 +82,11 @@ body
 
 	#scroller
 	{
-
-
 		a
 		{
 			color: inherit;
 			left: 0;
 			transition: left .3s ease-out;
-
 
 			.overlay
 			{
@@ -85,8 +99,7 @@ body
 				height: $polaroidheight;
 				border-bottom: 6px solid rgb(226, 226, 226);
 				box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, .2);
-				transition: box-shadow .15s ease-in;
-				transition: height .15s ease-in;
+				transition: height .15s ease-in, box-shadow .15s ease-in;
 
 				.polaroid-inner
 				{
@@ -108,7 +121,6 @@ body
 					}
 				}
 
-
 				.text-container
 				{
 
@@ -119,20 +131,6 @@ body
 						font-size: 1em;
 					}
 				}
-
-				&:hover
-				{
-					box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, .42);
-
-					.polaroid-inner
-					{
-						h1
-						{
-							opacity: 1;
-						}
-					}
-				}
-
 			}
 
 			&:hover

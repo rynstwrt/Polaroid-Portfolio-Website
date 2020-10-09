@@ -1,7 +1,7 @@
 //Ryan Stewart 10/08/2020
 $(document).ready(() =>
 {
-
+	const debounceTime = 300;
 	let canClick = true;
 	function debounce()
 	{
@@ -12,7 +12,7 @@ $(document).ready(() =>
 	{
 		if (!canClick) return;
 		canClick = false;
-		setTimeout(debounce, 200);
+		setTimeout(debounce, debounceTime);
 		let currActive = $('.active');
 		const nextActive = currActive.next();
 		if (nextActive.length != 0)
@@ -33,7 +33,7 @@ $(document).ready(() =>
 	{
 		if (!canClick) return;
 		canClick = false;
-		setTimeout(debounce, 200);
+		setTimeout(debounce, debounceTime);
 		let currActive = $('.active');
 		const nextActive = currActive.prev();
 		if (nextActive.length != 0)
