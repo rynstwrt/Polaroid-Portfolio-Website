@@ -23,7 +23,6 @@ body
 
 #loadingscreen
 {
-	position: absolute;
 	background-color: $color1;
 	opacity: 1;
 	z-index: 2;
@@ -34,7 +33,7 @@ body
 		{
 			opacity: 0;
 			transition: opacity .6s;
-			font-size: 4em;
+			font-size: 3em;
 		}
 
 		#underline
@@ -219,6 +218,22 @@ body
 	$polaroidinnerheight: $polaroidheight * .83;
 	$polaroidinnerheightactive: $polaroidheightactive * .83;
 
+	#loadingscreen
+	{
+		#content
+		{
+			h1
+			{
+				font-size: 4em;
+			}
+
+			#underline
+			{
+				height: 6px;
+			}
+		}
+	}
+
 	.arrowcontainer
 	{
 		img
@@ -253,7 +268,6 @@ body
 
 @media (min-width: 992px) // (lg) landscape tablets
 {
-
 }
 
 @media (min-width: 1200px) // (xl) desktops
@@ -263,6 +277,22 @@ body
 	$polaroidheightactive: ($polaroidwidth * 1.23333);
 	$polaroidinnerheight: $polaroidheight * .83;
 	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	#loadingscreen
+	{
+		#content
+		{
+			h1
+			{
+				font-size: 7em;
+			}
+
+			#underline
+			{
+				height: 6px;
+			}
+		}
+	}
 
 	.arrowcontainer
 	{
@@ -303,6 +333,22 @@ body
 	$polaroidheightactive: ($polaroidwidth * 1.23333);
 	$polaroidinnerheight: $polaroidheight * .83;
 	$polaroidinnerheightactive: $polaroidheightactive * .83;
+
+	#loadingscreen
+	{
+		#content
+		{
+			h1
+			{
+				font-size: 13em;
+			}
+
+			#underline
+			{
+				height: 6px;
+			}
+		}
+	}
 
 	.polaroid
 	{

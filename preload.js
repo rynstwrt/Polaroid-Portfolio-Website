@@ -4,17 +4,22 @@ let hasLoaded = false;
 
 $(document).ready(() =>
 {
-	console.log('a');
+	let hasRunAnimation = false;
 	$('#content h1').css({'opacity': '1'});
 	$('#underline').css({'width': '100%'});
 
+
 	$('#underline').on(browswertransitionevents, () =>
 	{
+		if (hasRunAnimation) return;
+
 		function checkIfDone()
 		{
 			if (hasLoaded)
 			{
+				hasRunAnimation = true;
 				clearInterval(interval);
+				$('#underline').addClass('align-self-end');
 				$('#underline').css({'width': '0%'});
 				$('#content h1').css({'opacity': '0'});
 
@@ -31,7 +36,7 @@ $(document).ready(() =>
 			}
 		}
 
-		const interval = setInterval(checkIfDone, 1000);
+		const interval = setInterval(checkIfDone, 500);
 	});
 });
 
