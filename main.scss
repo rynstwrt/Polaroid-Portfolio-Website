@@ -267,7 +267,7 @@ body
 
 @media (min-width: 2000px) // larger desktops
 {
-	$polaroidwidth: 300px;
+	$polaroidwidth: 350px;
 	$polaroidheight: ($polaroidwidth * 1.23333) - 25px;
 	$polaroidheightactive: ($polaroidwidth * 1.23333);
 	$polaroidinnerheight: $polaroidheight * .83;
