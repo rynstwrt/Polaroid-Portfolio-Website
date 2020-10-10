@@ -12,11 +12,11 @@ $(document).ready(() =>
 	// change the title text to the current photo
 	function changeTitle(currPolaroid)
 	{
-		$('#text-container').css({'opacity': '0'});
-		$('#text-container').on(browswertransitionevents, () =>
+		$('#text-container h1').css({'opacity': '0'});
+		$('#text-container h1').on(browswertransitionevents, () =>
 		{
 			$('#text-container h1').text($($($(currPolaroid.children()[1]).children()[0]).children()[1]).attr('alt'));
-			$('#text-container').css({'opacity': '1'});
+			$('#text-container h1').css({'opacity': '1'});
 		});
 	}
 	const scroller = $('#scroller');
