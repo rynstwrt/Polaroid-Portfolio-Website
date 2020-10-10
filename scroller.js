@@ -1,6 +1,7 @@
-//Ryan Stewart 10/08/2020
+// Ryan Stewart 10/08/2020
 $(document).ready(() =>
 {
+	// debounce function for the buttons
 	const debounceTime = 300;
 	let canClick = true;
 	function debounce()
@@ -8,15 +9,21 @@ $(document).ready(() =>
 		canClick = true;
 	}
 
+	// change the title text to the current photo
 	function changeTitle(currPolaroid)
 	{
-		$('#text-container h1').text($($($(currPolaroid.children()[1]).children()[0]).children()[1]).attr('alt'));
+		$('#text-container').css({'opacity': '0'});
+		$('#text-container').on(browswertransitionevents, () =>
+		{
+			$('#text-container h1').text($($($(currPolaroid.children()[1]).children()[0]).children()[1]).attr('alt'));
+			$('#text-container').css({'opacity': '1'});
+		});
 	}
 	const scroller = $('#scroller');
 	const numPolaroids = Math.ceil(scroller.children().length / 2);
 	changeTitle($(scroller.children()[numPolaroids - 1]));
 
-
+	// right arrow click event
 	$('#rightarrow').click((e) =>
 	{
 		if (!canClick) return;
@@ -39,6 +46,7 @@ $(document).ready(() =>
 		}
 	});
 
+	// left arrow click event
 	$('#leftarrow').click((e) =>
 	{
 		if (!canClick) return;

@@ -49,9 +49,10 @@ body
 
 #text-container
 {
+	transition: opacity .15s;
 	h1
 	{
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 }
 
@@ -214,11 +215,6 @@ body
 			{
 				font-size: 4em;
 			}
-
-			#underline
-			{
-				height: 6px;
-			}
 		}
 	}
 
@@ -234,7 +230,7 @@ body
 	{
 		h1
 		{
-			font-size: 5em;
+			font-size: 3.5em;
 		}
 	}
 
@@ -281,11 +277,6 @@ body
 			h1
 			{
 				font-size: 7em;
-			}
-
-			#underline
-			{
-				height: 6px;
 			}
 		}
 	}
@@ -338,11 +329,6 @@ body
 			{
 				font-size: 13em;
 			}
-
-			#underline
-			{
-				height: 6px;
-			}
 		}
 	}
 
@@ -354,6 +340,14 @@ body
 		.polaroid-inner
 		{
 			height: $polaroidinnerheight !important;
+		}
+	}
+
+	#text-container
+	{
+		h1
+		{
+			font-size: 6em;
 		}
 	}
 
