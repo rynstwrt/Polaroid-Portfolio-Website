@@ -11,19 +11,19 @@
 	<script src='preload.js'></script>
 	<title>Welcome.</title>
 </head>
-<body>
-	<div id='loadingscreen' class='position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center'>
+<body class='text-uppercase' style='font-family: "Handlee", cursive;'>
+	<div id='loadingscreen' class='position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center' style='opacity: 1; z-index: 2;'>
 		<div id='content' class='d-flex flex-column'>
-			<h1>LOADING</h1>
-			<div id='underline'></div>
+			<h1 style='opacity: 0;'>LOADING</h1>
+			<div id='underline' style='width: 0; height: 6px;'></div>
 		</div>
 	</div>
-	<div id='scrollercontainer' class='overflow-hidden d-flex flex-column'>
-		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; left: 0;'>
+	<div id='scrollercontainer' class='position-relative overflow-hidden d-flex flex-column' style='width: 100vw; height: 100vh; opacity: 0;'>
+		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; left: 0; z-index: 1;'>
 			<img src='assets/arrow.svg' alt='arrow' id='leftarrow' class='mx-1'/>
 		</div>
-		<div id='text-container' class='waves d-flex flex-column justify-content-center h-100 text-center'>
-			<h1></h1>
+		<div id='text-container' class='waves d-flex flex-column justify-content-center h-100 text-center' style='background-size: cover;'>
+			<h1 class='font-italic'></h1>
 		</div>
 		<div id='scroller' class='h-100 d-flex justify-content-center align-items-center'>
 			<a href='assets/eyes.jpg' target='_blank' class='position-relative text-decoration-none mx-3'>
@@ -83,8 +83,8 @@
 			</a>
 
 		</div>
-		<div id='wave2' class='h-100'></div>
-		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; right: 0;'>
+		<div id='wave2' class='h-100' style='background-size: cover;'></div>
+		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; right: 0; z-index: 1;'>
 			<img src='assets/arrow.svg' alt='arrow' id='rightarrow' class='mx-1'/>
 		</div>
 	</div>

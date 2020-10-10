@@ -23,8 +23,7 @@ $(document).ready(() =>
 	const numPolaroids = Math.ceil(scroller.children().length / 2);
 	changeTitle($(scroller.children()[numPolaroids - 1]));
 
-	// right arrow click event
-	$('#rightarrow').click((e) =>
+	function moveRight()
 	{
 		if (!canClick) return;
 		canClick = false;
@@ -44,10 +43,9 @@ $(document).ready(() =>
 			});
 			changeTitle(nextActive);
 		}
-	});
+	}
 
-	// left arrow click event
-	$('#leftarrow').click((e) =>
+	function moveLeft()
 	{
 		if (!canClick) return;
 		canClick = false;
@@ -67,5 +65,28 @@ $(document).ready(() =>
 			});
 			changeTitle(nextActive);
 		}
+	}
+
+	$('#rightarrow').click(() => moveRight());
+	$('#leftarrow').click(() => moveLeft());
+	$(document).on('mousewheel DOMMouseScroll MozMousePixelScroll', (e, delta) =>
+	{
+		e.originalEvent.wheelDelta > 0 ? moveLeft() : moveRight();
 	});
+	document.onkeydown = function(e)
+	{
+		switch(e.which)
+		{
+			// left
+			case 37:
+				moveLeft();
+				break;
+
+			// right
+			case 39:
+				moveRight();
+				break;
+		}
+	};
+
 });
