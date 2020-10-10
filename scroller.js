@@ -8,6 +8,15 @@ $(document).ready(() =>
 		canClick = true;
 	}
 
+	function changeTitle(currPolaroid)
+	{
+		$('#text-container h1').text($($($(currPolaroid.children()[1]).children()[0]).children()[1]).attr('alt'));
+	}
+	const scroller = $('#scroller');
+	const numPolaroids = Math.ceil(scroller.children().length / 2);
+	changeTitle($(scroller.children()[numPolaroids - 1]));
+
+
 	$('#rightarrow').click((e) =>
 	{
 		if (!canClick) return;
@@ -26,6 +35,7 @@ $(document).ready(() =>
 				const currentPosition = $(v).offset();
 				$(v).offset({top: currentPosition.top, left: (currentPosition.left - diff)});
 			});
+			changeTitle(nextActive);
 		}
 	});
 
@@ -47,6 +57,7 @@ $(document).ready(() =>
 				const currentPosition = $(v).offset();
 				$(v).offset({top: currentPosition.top, left: (currentPosition.left + diff)});
 			});
+			changeTitle(nextActive);
 		}
 	});
 });

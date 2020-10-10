@@ -18,7 +18,9 @@ body
 {
 	background-color: $color1;
 	color: $color2;
-	font-family: 'Lato', sans-serif;
+	//font-family: 'Lato', sans-serif;
+	font-family: 'Kalam', cursive;
+	text-transform: uppercase;
 }
 
 #loadingscreen
@@ -43,6 +45,14 @@ body
 			height: 6px;
 			background-color: $color2;
 		}
+	}
+}
+
+#text-container
+{
+	h1
+	{
+		font-size: 3em;
 	}
 }
 
@@ -80,6 +90,7 @@ body
 				.hovercontainer
 				{
 					opacity: 1;
+
 					h1
 					{
 						opacity: 1 !important;
@@ -100,7 +111,6 @@ body
 
 	.arrowcontainer
 	{
-		background-color: $color1;
 		z-index: 1;
 
 		img
@@ -180,32 +190,11 @@ body
 
 @media (min-width: 576px) // 576px to 768px (sm) landscape phones
 {
-	$polaroidwidth: 200px;
-	$polaroidheight: ($polaroidwidth * 1.23333) - 25px;
-	$polaroidheightactive: ($polaroidwidth * 1.23333);
-	$polaroidinnerheight: $polaroidheight * .83;
-	$polaroidinnerheightactive: $polaroidheightactive * .83;
-
-	.polaroid
+	#text-container
 	{
-		width: $polaroidwidth !important;
-		height: $polaroidheight !important;
-
-		.polaroid-inner
+		h1
 		{
-			height: $polaroidinnerheight !important;
-		}
-	}
-
-	.active
-	{
-		.polaroid
-		{
-			height: $polaroidheightactive !important;
-			.polaroid-inner
-			{
-				height: $polaroidinnerheightactive !important;
-			}
+			font-size: 2em;
 		}
 	}
 }
@@ -239,6 +228,14 @@ body
 		img
 		{
 			width: 65px !important;
+		}
+	}
+
+	#text-container
+	{
+		h1
+		{
+			font-size: 5em;
 		}
 	}
 

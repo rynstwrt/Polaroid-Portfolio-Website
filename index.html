@@ -5,6 +5,7 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel='stylesheet' href='main.min.css'>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,9 +19,12 @@
 			<div id='underline'></div>
 		</div>
 	</div>
-	<div id='scrollercontainer' class='overflow-hidden'>
+	<div id='scrollercontainer' class='overflow-hidden d-flex flex-column'>
 		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; left: 0;'>
 			<img src='assets/arrow.svg' alt='arrow' id='leftarrow' class='mx-1'/>
+		</div>
+		<div id='text-container' class='d-flex flex-column justify-content-center h-100 text-center'>
+			<h1></h1>
 		</div>
 		<div id='scroller' class='h-100 d-flex justify-content-center align-items-center'>
 			<a href='assets/eyes.jpg' target='_blank' class='position-relative text-decoration-none mx-3'>
@@ -30,7 +34,7 @@
 						<div class='hovercontainer position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
 							<h1 class='text-white'>CLICK TO VIEW</h1>
 						</div>
-						<img src='assets/eyes.jpg' alt='eyes' class='w-100'/>
+						<img src='assets/eyes.jpg' alt='"Eyes"' class='w-100'/>
 					</div>
 				</div>
 			</a>
@@ -41,7 +45,7 @@
 						<div class='hovercontainer position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
 							<h1 class='text-white'>CLICK TO VIEW</h1>
 						</div>
-						<img src='assets/face.jpg' alt='face' class='h-100'/>
+						<img src='assets/face.jpg' alt='"Face"' class='h-100'/>
 					</div>
 				</div>
 			</a>
@@ -52,7 +56,7 @@
 						<div class='hovercontainer position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
 							<h1 class='text-white'>CLICK TO VIEW</h1>
 						</div>
-						<img src='assets/scale.jpg' alt='scale' class='w-100'/>
+						<img src='assets/scale.jpg' alt='"Scale"' class='w-100'/>
 					</div>
 				</div>
 			</a>
@@ -63,7 +67,7 @@
 						<div class='hovercontainer position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
 							<h1 class='text-white'>CLICK TO VIEW</h1>
 						</div>
-						<img src='assets/sphere.jpg' alt='sphere' class='w-100'/>
+						<img src='assets/sphere.jpg' alt='"Sphere"' class='w-100'/>
 					</div>
 				</div>
 			</a>
@@ -74,11 +78,12 @@
 						<div class='hovercontainer position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
 							<h1 class='text-white'>CLICK TO VIEW</h1>
 						</div>
-						<img src='assets/wedge.png' alt='wedge' class='w-100'/>
+						<img src='assets/wedge.png' alt='"Wedge"' class='w-100'/>
 					</div>
 				</div>
 			</a>
 		</div>
+		<div class='h-100'></div>
 		<div class='arrowcontainer h-100 d-flex align-items-center position-absolute' style='top: 0; right: 0;'>
 			<img src='assets/arrow.svg' alt='arrow' id='rightarrow' class='mx-1'/>
 		</div>
